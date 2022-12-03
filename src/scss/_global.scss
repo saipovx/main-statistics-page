@@ -1,0 +1,62 @@
+// Container
+.container {
+    max-width: ($containerWidth + $containerPadding) + px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 $containerSidePadding + px;
+
+    @media (max-width: $breakpoint1450) {
+        max-width: 1200px;
+    }
+
+    @media (max-width: $breakpoint992) {
+        max-width: 970px;
+    }
+
+    @media (max-width: $breakpoint768) {
+        max-width: 740px;
+    }
+
+    @media (max-width: $breakpoint480) {
+        max-width: none;
+    }
+}
+
+// Body Locked
+body {
+    font-family: 'Inter', sans-serif;
+    &.locked {
+        overflow: hidden;
+    }
+}
+
+
+// .tippy-box[data-theme~='box'] {
+    
+//     & .span__box{
+//         position: absolute;
+//         top: 40px;
+//         left: 0px;
+//         width: 140px;
+//         padding: 5px 0px;
+//         border-radius: 7px;
+//         background-color: #fff !important;
+//         border: none;
+//         z-index: 999;
+
+//         &-title{
+//             padding: 10px;
+//             display: flex;
+//             align-items: center;
+//             justify-content: space-between;
+//             font-size: 16px;
+//             color: #012250;
+//             transition: all ease .4s;
+
+//             &:hover{
+//                 background-color: rgb(217 217 217 / 100%);
+//             }
+//         }
+//     }
+
+// }
