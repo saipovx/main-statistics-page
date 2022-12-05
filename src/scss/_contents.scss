@@ -5,19 +5,15 @@
 
 
 .contents{
-    display: flex;
-    align-items: flex-start;
-    justify-content: center;
-    gap: 32px;
+    display: grid;
+    grid-gap: 20px;
+    grid-template-columns: repeat(3,1fr);
 
     &__info{
-        flex: 0 1 800px;
-        display: flex;
-        flex-direction: column;
-
-        & .contents__info2{
-            flex: 0 0 100%;
-        }
+    display: flex;
+    flex-direction: column; 
+    grid-column: 1/3;
+    grid-row: 1/2;
 
 
         & .cont{
@@ -95,333 +91,21 @@
             }
 
             &__center{
-                width: 100%;
-                height: 360px;
+                height: 356px;
+                width: 800px;
                 background-color: #c1c1c1;
             }
-
-            &__footer{
-                display: flex;
-                gap: 33px;
-                margin-top: 33px;
-
-                &-item{
-                    display: flex;
-                    flex-direction: column;
-                    justify-content: flex-end;
-                    flex: 0 1 380px;
-                    width: 380px;
-
-                    &-hide{
-                        display: flex;
-                        justify-content: space-between;
-                        align-items: center;
-        
-                        &-text{
-                            font-size: 17px;
-                            line-height: 28px;
-                            font-weight: 600;
-                            color: rgb(0 17 34 / 95%);
-
-                            &-data{
-                                margin-left: 12px;
-                                color: rgb(0 17 34 / 56%);
-                                font-size: 13px;
-                                line-height: 20px;
-                            }
-
-                        }
-
-                        &-btns{
-                            display: flex;
-                            align-items: center;
-                            justify-content: center;
-                            gap: 5px;
-                        
-                            &-btn1{
-                                width: 34px;
-                                height: 34px;
-                                border-radius: 8px;
-                                cursor: pointer;
-
-                                display: flex;
-                                align-items: center;
-                                justify-content: center;
-                                transition: all ease .3s;
-
-                                &:hover{
-                                    background-color: rgba(211, 211, 211, 0.636);
-                                }
-                            }
-
-                            &-btn2{
-                                width: 34px;
-                                height: 34px;
-                                border-radius: 8px;
-                                cursor: pointer;
-
-                                display: flex;
-                                align-items: center;
-                                justify-content: center;
-                                transition: all ease .3s;
-
-                                &:hover{
-                                    background-color: rgba(211, 211, 211, 0.636);
-                                }
-                            }
-                        
-                        }
-
-                    }
-                }
-
-                &-swiper{
-                     width: 380px;
-                     height: 150px;
-                     margin-top: 16px;
-
-                     & .vivobox{
-                        display: flex;
-                        align-items: center;
-                        justify-content: space-between;
-                        width: 380px;
-                        height: 44px;
-
-                        display: flex;
-                        padding: 8px 24px;
-                        color: rgba(0,16,42,.95);
-                        border-radius: 16px;
-                        background: rgb(245 247 250 / 100%);
-                        flex-wrap: nowrap;
-                        box-sizing: border-box;
-                        cursor: pointer;
-
-                        &__text{
-                            font-weight: 400;
-                            font-size: 15px;
-                            line-height: 24px;
-                            color: rgba(0,16,42,.95);
-                        }
-
-                        &__num{
-                            width: 44px;
-                            height: 24px;
-                            display: flex;
-                            align-items: center;
-                            justify-content: center;
-                            background-color: rgb(97 131 162 / 16%);
-                            border-radius: 15px;
-                        }
-
-                        &__num2{
-                            width: 44px;
-                            height: 24px;
-                            display: flex;
-                            align-items: center;
-                            justify-content: center;
-                            background-color:rgb(232 56 39 / 100%);
-                            border-radius: 15px;
-
-                            &-text{
-                                color: #fff;
-                            }
-
-                        }
-
-                     }
-
-                }
-
-                &-rek{
-                    background-color: rgb(244 250 254 / 100%);
-
-                    box-sizing: border-box;
-                    padding: 20px;
-                    border-radius: 24px;
-                    width: 380px;
-                    cursor: pointer;
-
-                    &-item{
-                        display: flex;
-                        align-items: center;
-                        justify-content: space-between;
-
-                        &-btn{
-                            font-size: 12px;
-                            line-height: 20px;
-                            font-weight: 700;
-                            letter-spacing: 0px;
-                            color: #fff;
-                            border-radius: 10px;
-                            padding: 5px 10px;
-                            background-color: #012250;
-                        }
-
-                        & #btn__rek{
-                            color: #fff;
-                            background: rgb(29 174 64 / 100%);
-                        }
-
-                        &-svg{
-                            max-width: 93px;
-                        }
-
-                        &-text{
-                            font-weight: 400;
-                            font-size: 15px;
-                            line-height: 20px;
-                            letter-spacing: 0;
-                            color: rgb(0 17 34 / 95%);
-                        }
-
-                        &-title{
-                            font-weight: 400;
-                            font-size: 15px;
-                            line-height: 20px;
-                            letter-spacing: 0;
-                            color: rgb(0 17 34 / 95%);
-                            margin: 20px 0px;
-                        }
-
-                        &-btn2{
-                            color: rgb(0 91 255 / 100%);
-                            font-weight: 600;
-                            font-size: 15px;
-                            line-height: 16px;
-
-                        }
-
-                        &-num{
-                            display: flex;
-                            align-items: center;
-                            gap: 3px;
-                            font-weight: 600;
-                            font-size: 15px;
-                            line-height: 20px;
-                            color: rgb(0 17 34 / 95%);
-                        }
-                    }
-
-                    & .item2{
-                        margin-top: 40px;
-                    }
-
-                }
-
-                &-info{
-                    background-color: rgb(244 250 254 / 100%);
-
-                    box-sizing: border-box;
-                    padding: 20px;
-                    border-radius: 24px;
-                    width: 380px;
-                    cursor: pointer;
-
-                    &-bottom{
-                        font-weight: 400;
-                        font-size: 15px;
-                        line-height: 24px;
-                        letter-spacing: 0;
-                        font-variant-numeric: normal;
-                        color:rgb(0 17 34 / 66%);
-                        margin-top: 30px;
-                    }
-
-                    & .infoo{
-                        margin-top: 16px;
-                        display: flex;
-                        align-items: center;
-                        justify-content: flex-start;
-                        gap: 40px;
-
-
-
-                        &__item{
-                            display: flex;
-                            justify-content: flex-end;
-                            flex-direction: column;
-
-                            &-title{
-                                font-size: 28px;
-                                font-weight: 600;
-                                line-height: 36px;
-                                letter-spacing: -.3px;
-                                color: rgb(0 17 34 / 95%);
-                            }
-
-                            &-subtitle{
-                                font-weight: 400;
-                                font-size: 15px;
-                                line-height: 20px;
-                            }
-
-                            &-text{
-                                font-size: 17px;
-                                line-height: 28px;
-                                color: rgb(0 17 34 / 66%);
-                            }
-                        }
-                    }
-
-                    & .infoo2{
-                        margin-top: 16px;
-                        display: flex;
-                        flex-direction: column;
-
-                        & .infoo3{
-                            display: flex;
-                            align-items: center;
-                            justify-content: flex-start;
-                            gap: 40px;
-
-                            &__item{
-                                display: flex;
-                                justify-content: flex-end;
-                                flex-direction: column;
-    
-                                &-title{
-                                    font-size: 28px;
-                                    font-weight: 600;
-                                    line-height: 36px;
-                                    letter-spacing: -.3px;
-                                    color: rgb(0 17 34 / 95%);
-                                }
-    
-                                &-subtitle{
-                                    font-weight: 400;
-                                    font-size: 15px;
-                                    line-height: 20px;
-                                }
-    
-                                &-text{
-                                    font-size: 17px;
-                                    line-height: 28px;
-                                    color: rgb(0 17 34 / 66%);
-                                }
-                            }
-                        }
-
-                    
-                    }
-
-                }
-
-
-
-            }
-
 
         }
 
     }
 
-
     &__article{
-        flex: 0 1 400px;
+        width: 400px;
 
-        display: flex;
-        flex-direction: column;
-        justify-content: flex-start;
+        display: grid;
+        grid-column: 3/3;
+        grid-row: span 3;
 
         & .art{
 
@@ -545,6 +229,313 @@
         }
     }
 
+
+    &__block{
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        width: 380px;
+
+        &-hide{
+                        display: flex;
+                        justify-content: space-between;
+                        align-items: center;
+            
+                        &-text{
+                            font-size: 17px;
+                            line-height: 28px;
+                            font-weight: 600;
+                            color: rgb(0 17 34 / 95%);
+            
+                            &-data{
+                                margin-left: 12px;
+                                color: rgb(0 17 34 / 56%);
+                                font-size: 13px;
+                                line-height: 20px;
+                            }
+            
+                        }
+            
+                        &-btns{
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                            gap: 5px;
+                        
+                            &-btn1{
+                                width: 34px;
+                                height: 34px;
+                                border-radius: 8px;
+                                cursor: pointer;
+            
+                                display: flex;
+                                align-items: center;
+                                justify-content: center;
+                                transition: all ease .3s;
+            
+                                &:hover{
+                                    background-color: rgba(211, 211, 211, 0.636);
+                                }
+                            }
+            
+                            &-btn2{
+                                width: 34px;
+                                height: 34px;
+                                border-radius: 8px;
+                                cursor: pointer;
+            
+                                display: flex;
+                                align-items: center;
+                                justify-content: center;
+                                transition: all ease .3s;
+            
+                                &:hover{
+                                    background-color: rgba(211, 211, 211, 0.636);
+                                }
+                            }
+                        
+                        }
+            
+        }
+            
+        &-swiper{
+                     width: 380px;
+                     height: 150px;
+                     margin-top: 16px;
+            
+                     & .vivobox{
+                        display: flex;
+                        align-items: center;
+                        justify-content: space-between;
+                        width: 380px;
+                        height: 44px;
+            
+                        display: flex;
+                        padding: 8px 24px;
+                        color: rgba(0,16,42,.95);
+                        border-radius: 16px;
+                        background: rgb(245 247 250 / 100%);
+                        flex-wrap: nowrap;
+                        box-sizing: border-box;
+                        cursor: pointer;
+            
+                        &__text{
+                            font-weight: 400;
+                            font-size: 15px;
+                            line-height: 24px;
+                            color: rgba(0,16,42,.95);
+                        }
+            
+                        &__num{
+                            width: 44px;
+                            height: 24px;
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                            background-color: rgb(97 131 162 / 16%);
+                            border-radius: 15px;
+                        }
+            
+                        &__num2{
+                            width: 44px;
+                            height: 24px;
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                            background-color:rgb(232 56 39 / 100%);
+                            border-radius: 15px;
+            
+                            &-text{
+                                color: #fff;
+                            }
+            
+                        }
+            
+                     }
+            
+        }
+
+        &-rek{
+            background-color: rgb(244 250 254 / 100%);
+    
+            box-sizing: border-box;
+            padding: 20px;
+            border-radius: 24px;
+            width: 380px;
+            cursor: pointer;
+    
+            &-item{
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+    
+                &-btn{
+                    font-size: 12px;
+                    line-height: 20px;
+                    font-weight: 700;
+                    letter-spacing: 0px;
+                    color: #fff;
+                    border-radius: 10px;
+                    padding: 5px 10px;
+                    background-color: #012250;
+                }
+    
+                & #btn__rek{
+                    color: #fff;
+                    background: rgb(29 174 64 / 100%);
+                }
+    
+                &-svg{
+                    max-width: 93px;
+                }
+    
+                &-text{
+                    font-weight: 400;
+                    font-size: 15px;
+                    line-height: 20px;
+                    letter-spacing: 0;
+                    color: rgb(0 17 34 / 95%);
+                }
+    
+                &-title{
+                    font-weight: 400;
+                    font-size: 15px;
+                    line-height: 20px;
+                    letter-spacing: 0;
+                    color: rgb(0 17 34 / 95%);
+                    margin: 20px 0px;
+                }
+    
+                &-btn2{
+                    color: rgb(0 91 255 / 100%);
+                    font-weight: 600;
+                    font-size: 15px;
+                    line-height: 16px;
+    
+                }
+    
+                &-num{
+                    display: flex;
+                    align-items: center;
+                    gap: 3px;
+                    font-weight: 600;
+                    font-size: 15px;
+                    line-height: 20px;
+                    color: rgb(0 17 34 / 95%);
+                }
+            }
+    
+            & .item2{
+                margin-top: 40px;
+            }
+    
+        }
+
+
+        &-info{
+        background-color: rgb(244 250 254 / 100%);
+
+        box-sizing: border-box;
+        padding: 20px;
+        border-radius: 24px;
+        width: 380px;
+        cursor: pointer;
+
+        &-bottom{
+            font-weight: 400;
+            font-size: 15px;
+            line-height: 24px;
+            letter-spacing: 0;
+            font-variant-numeric: normal;
+            color:rgb(0 17 34 / 66%);
+            margin-top: 30px;
+        }
+
+        & .infoo{
+            margin-top: 16px;
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            gap: 40px;
+
+
+
+            &__item{
+                display: flex;
+                justify-content: flex-end;
+                flex-direction: column;
+
+                &-title{
+                    font-size: 28px;
+                    font-weight: 600;
+                    line-height: 36px;
+                    letter-spacing: -.3px;
+                    color: rgb(0 17 34 / 95%);
+                }
+
+                &-subtitle{
+                    font-weight: 400;
+                    font-size: 15px;
+                    line-height: 20px;
+                }
+
+                &-text{
+                    font-size: 17px;
+                    line-height: 28px;
+                    color: rgb(0 17 34 / 66%);
+                }
+            }
+        }
+
+        & .infoo2{
+            margin-top: 16px;
+            display: flex;
+            flex-direction: column;
+
+            & .infoo3{
+                display: flex;
+                align-items: center;
+                justify-content: flex-start;
+                gap: 40px;
+
+                &__item{
+                    display: flex;
+                    justify-content: flex-end;
+                    flex-direction: column;
+
+                    &-title{
+                        font-size: 28px;
+                        font-weight: 600;
+                        line-height: 36px;
+                        letter-spacing: -.3px;
+                        color: rgb(0 17 34 / 95%);
+                    }
+
+                    &-subtitle{
+                        font-weight: 400;
+                        font-size: 15px;
+                        line-height: 20px;
+                    }
+
+                    &-text{
+                        font-size: 17px;
+                        line-height: 28px;
+                        color: rgb(0 17 34 / 66%);
+                    }
+                }
+            }
+
+        
+        }
+
+    }
+
+
+
+    }
 }
+
+
+
 
 
